@@ -1,0 +1,18 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+ 
+int main() {
+	int num = 0;
+	int a[10] = { 1,2,3,4,5,6,7,8,9 };
+	do {
+		int left, right, down;
+		left = a[0] + a[1] + a[2] + a[3];
+		right = a[3] + a[4] + a[5] + a[6];
+		down = a[6] + a[7] + a[8] + a[0];
+		if (left == right && right == down) num++;
+	} while (next_permutation(a, a + 9));
+ 
+	cout << num / 6 << endl;
+	return 0;
+}
